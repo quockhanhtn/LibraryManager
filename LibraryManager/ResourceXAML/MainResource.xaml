@@ -1,0 +1,8 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:LibraryManager.ResourceXAML"
+                    xmlns:viewmodel="clr-namespace:LibraryManager.ViewModel">
+    <viewmodel:ControlBarViewModel x:Key="ControlBarVM"/>
+    <viewmodel:MainWindowViewModel x:Key="MainWindowVM"/>
+    <viewmodel:LoginWindowViewModel x:Key="LoginWindowVM"/>
+</ResourceDictionary>

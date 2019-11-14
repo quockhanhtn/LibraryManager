@@ -1,0 +1,42 @@
+﻿<Window x:Class="LibraryManager.MemberWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:LibraryManager"
+        mc:Ignorable="d"
+        
+        xmlns:uc="clr-namespace:LibraryManager.UserControlUI"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+        x:Name="memberWindow"
+        Title="Member Window" 
+
+        TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+        TextElement.FontWeight="Regular"
+        TextElement.FontSize="13"
+        TextOptions.TextFormattingMode="Ideal"
+        TextOptions.TextRenderingMode="Auto"
+        Background="{DynamicResource MaterialDesignPaper}"
+        FontFamily="{DynamicResource MaterialDesignFont}"
+        Height="400" Width="400"
+        WindowStartupLocation="CenterScreen"
+        WindowStyle="None"
+        ResizeMode="NoResize">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <!--Control Bar -->
+        <Grid Grid.Row="0">
+            <uc:ControlBarUC Tag="{Binding Title, ElementName=mainWindows}"></uc:ControlBarUC>
+        </Grid>
+
+        <!--Login Windows-->
+        <Grid Grid.Row="1">
+
+        </Grid>
+    </Grid>
+</Window>

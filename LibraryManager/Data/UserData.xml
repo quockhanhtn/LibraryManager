@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Users>
+  
+  <User>
+    <Username>admin</Username>
+    <Password>db69fc039dcbd2962cb4d28f5891aae1</Password>
+    <UserType>1</UserType>
+    <PersonID>18110503</PersonID>
+  </User>
+
+  <User>
+    <Username>guest</Username>
+    <Password>fdfe55b8a68ffb068d3f3c2649ab542a</Password>
+    <UserType>2</UserType>
+    <PersonID>18110505</PersonID>
+  </User>
+  
+</Users>

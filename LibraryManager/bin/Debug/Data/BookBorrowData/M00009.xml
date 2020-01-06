@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BookBorrows>
+  <BookBorrow IdBook="B00014">
+    <IdLibrarian>NV000</IdLibrarian>
+    <DateBorrow>19/12/2019</DateBorrow>
+  </BookBorrow>
+  <BookBorrow IdBook="B00015">
+    <IdLibrarian>NV000</IdLibrarian>
+    <DateBorrow>19/12/2019</DateBorrow>
+  </BookBorrow>
+</BookBorrows>

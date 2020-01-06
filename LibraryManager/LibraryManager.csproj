@@ -1,0 +1,363 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D4356BCF-32E2-4815-87BA-DAF36301DBA1}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>LibraryManager</RootNamespace>
+    <AssemblyName>LibraryManager</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <LangVersion>8.0</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <LangVersion>8.0</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>library.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EPPlus, Version=4.5.3.2, Culture=neutral, PublicKeyToken=ea159fdaa78159a1, processorArchitecture=MSIL">
+      <HintPath>..\packages\EPPlus.4.5.3.2\lib\net40\EPPlus.dll</HintPath>
+    </Reference>
+    <Reference Include="MaterialDesignColors, Version=1.2.0.325, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MaterialDesignColors.1.2.0\lib\net45\MaterialDesignColors.dll</HintPath>
+    </Reference>
+    <Reference Include="MaterialDesignThemes.Wpf, Version=2.6.0.325, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MaterialDesignThemes.2.6.0\lib\net45\MaterialDesignThemes.Wpf.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Expression.Interactions, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Windows.Interactivity.WPF.2.0.20525\lib\net40\Microsoft.Expression.Interactions.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Windows.Interactivity, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Windows.Interactivity.WPF.2.0.20525\lib\net40\System.Windows.Interactivity.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="AddBookCategoryWindow.xaml.cs">
+      <DependentUpon>AddBookCategoryWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AddBookItemWindow.xaml.cs">
+      <DependentUpon>AddBookItemWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AddPersonWindow.xaml.cs">
+      <DependentUpon>AddPersonWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CustomUserControl\AccountSetttingUC.xaml.cs">
+      <DependentUpon>AccountSetttingUC.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CustomUserControl\BookCategoryManagerUC.xaml.cs">
+      <DependentUpon>BookCategoryManagerUC.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CustomUserControl\BookManagerUC.xaml.cs">
+      <DependentUpon>BookManagerUC.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CustomUserControl\BorrowBookUC.xaml.cs">
+      <DependentUpon>BorrowBookUC.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CustomUserControl\LibrarianManagerUC.xaml.cs">
+      <DependentUpon>LibrarianManagerUC.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CustomUserControl\ListBookBorrowUC.xaml.cs">
+      <DependentUpon>ListBookBorrowUC.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CustomUserControl\MemberManagerUC.xaml.cs">
+      <DependentUpon>MemberManagerUC.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CustomUserControl\ReturnBookUC.xaml.cs">
+      <DependentUpon>ReturnBookUC.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="InputIdPerSonWindow.xaml.cs">
+      <DependentUpon>InputIdPerSonWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Interface\IAccountCommand.cs" />
+    <Compile Include="Interface\IExitCommand.cs" />
+    <Compile Include="Interface\IOKCancelCommand.cs" />
+    <Compile Include="Interface\IWindowOption.cs" />
+    <Compile Include="KBox\KChangePasswordBox.xaml.cs">
+      <DependentUpon>KChangePasswordBox.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="KBox\KInputBox.xaml.cs">
+      <DependentUpon>KInputBox.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="KBox\KMessageBox.xaml.cs">
+      <DependentUpon>KMessageBox.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="LibrarianWindow.xaml.cs">
+      <DependentUpon>LibrarianWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="LoginWindow.xaml.cs">
+      <DependentUpon>LoginWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MemberWindow.xaml.cs">
+      <DependentUpon>MemberWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Book.cs" />
+    <Compile Include="Model\BookBorrow.cs" />
+    <Compile Include="Model\BookCategory.cs" />
+    <Compile Include="Model\BookItem.cs" />
+    <Compile Include="Model\BookPunish.cs" />
+    <Compile Include="Model\Librarian.cs" />
+    <Compile Include="Model\LibraryDatabase.cs" />
+    <Compile Include="Model\Member.cs" />
+    <Compile Include="Model\Person.cs" />
+    <Compile Include="Model\User.cs" />
+    <Compile Include="StatisticBookWindow.xaml.cs">
+      <DependentUpon>StatisticBookWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateBookItemWindow.xaml.cs">
+      <DependentUpon>UpdateBookItemWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Utility\ExcelFile.cs" />
+    <Compile Include="Utility\FormatData.cs" />
+    <Compile Include="Utility\PassWordEncode.cs" />
+    <Compile Include="ViewModel\AccountSetttingUCViewModel.cs" />
+    <Compile Include="ViewModel\AddBookCategoryWindowViewModel.cs" />
+    <Compile Include="ViewModel\AddBookItemWindowViewModel.cs" />
+    <Compile Include="ViewModel\AddPersonWindowViewModel.cs" />
+    <Compile Include="ViewModel\BaseViewModel.cs" />
+    <Compile Include="ViewModel\BookCategoryManagerUCViewModel.cs" />
+    <Compile Include="ViewModel\BookManagerUCViewModel.cs" />
+    <Compile Include="ViewModel\BorrowBookUCViewModel.cs" />
+    <Compile Include="ViewModel\ControlBarViewModel.cs" />
+    <Compile Include="ViewModel\InputIdPerSonWindowViewModel.cs" />
+    <Compile Include="ViewModel\LibrarianWindowViewModel.cs" />
+    <Compile Include="ViewModel\ListBookBorrowUCViewModel.cs" />
+    <Compile Include="ViewModel\LoginWindowViewModel.cs" />
+    <Compile Include="ViewModel\MainWindowViewModel.cs" />
+    <Compile Include="ViewModel\MemberManagerUCViewModel.cs" />
+    <Compile Include="ViewModel\MemberWindowViewModel.cs" />
+    <Compile Include="ViewModel\LibrarianManagerUCViewModel.cs" />
+    <Compile Include="ViewModel\ReturnBookUCViewModel.cs" />
+    <Compile Include="ViewModel\StatisticBookWindowViewModel.cs" />
+    <Compile Include="ViewModel\UpdateBookItemWindowViewModel.cs" />
+    <Page Include="AddBookCategoryWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AddBookItemWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AddPersonWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CustomUserControl\AccountSetttingUC.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CustomUserControl\BookCategoryManagerUC.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CustomUserControl\BookManagerUC.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CustomUserControl\BorrowBookUC.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CustomUserControl\ControlBarUC.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CustomUserControl\LibrarianManagerUC.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CustomUserControl\ListBookBorrowUC.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CustomUserControl\MemberManagerUC.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CustomUserControl\ReturnBookUC.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="InputIdPerSonWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="KBox\KChangePasswordBox.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="KBox\KInputBox.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="KBox\KMessageBox.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="LibrarianWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="LoginWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CustomUserControl\ControlBarUC.xaml.cs">
+      <DependentUpon>ControlBarUC.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="MemberWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ResourceXAML\MainResource.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="StatisticBookWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UpdateBookItemWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="ClassDiagram1.cd" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="Microsoft.Office.Core">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>8</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Interop.Excel">
+      <Guid>{00020813-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>9</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="VBIDE">
+      <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="ResourceXAML\icon\library.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="ResourceXAML\icon\statistic.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="ResourceXAML\icon\bookAdd.ico" />
+    <Resource Include="ResourceXAML\icon\personAdd.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="ResourceXAML\icon\add.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="ResourceXAML\icon\input.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="library.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="ResourceXAML\icon\hidePassword.png" />
+    <Resource Include="ResourceXAML\icon\showPassword.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

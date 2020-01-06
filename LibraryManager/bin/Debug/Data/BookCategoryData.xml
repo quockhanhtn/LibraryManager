@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BookCategories>
+  <BookCategory Id="GT">
+    <Name>Giáo trình</Name>
+    <BorrowTime>120</BorrowTime>
+  </BookCategory>
+  <BookCategory Id="CNTT">
+    <Name>Công nghệ thông tin</Name>
+    <BorrowTime>40</BorrowTime>
+  </BookCategory>
+  <BookCategory Id="TA">
+    <Name>Tiếng Anh</Name>
+    <BorrowTime>40</BorrowTime>
+  </BookCategory>
+  <BookCategory Id="TN">
+    <Name>Sách tiếng Nhật</Name>
+    <BorrowTime>60</BorrowTime>
+  </BookCategory>
+  <BookCategory Id="KNS">
+    <Name>Kỹ năng sống</Name>
+    <BorrowTime>35</BorrowTime>
+  </BookCategory>
+  <BookCategory Id="TH">
+    <Name>Sách tiếng Hàn</Name>
+    <BorrowTime>20</BorrowTime>
+  </BookCategory>
+  <BookCategory Id="LLCT">
+    <Name>Lý luận chính trị</Name>
+    <BorrowTime>120</BorrowTime>
+  </BookCategory>
+</BookCategories>

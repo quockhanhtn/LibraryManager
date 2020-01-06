@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Librarians>
+  <Librarian Id="NV000">
+    <FirstName>Quản trị viên</FirstName>
+    <LastName></LastName>
+    <Sex>Khác</Sex>
+    <BirthDay>1/1/2019</BirthDay>
+    <Email>admin@librarian.com</Email>
+    <Phone>0000000000</Phone>
+    <IsActive>1</IsActive>
+  </Librarian>
+  <Librarian Id="NV001">
+    <FirstName>Thảo</FirstName>
+    <LastName>Lê Thanh</LastName>
+    <Sex>Nữ</Sex>
+    <BirthDay>13/11/1995</BirthDay>
+    <Email>thaole@gmail.com</Email>
+    <Phone>0987486575</Phone>
+    <IsActive>1</IsActive>
+  </Librarian>
+  <Librarian Id="NV002">
+    <FirstName>Hằng</FirstName>
+    <LastName>Nguyễn Thúy</LastName>
+    <Sex>Nữ</Sex>
+    <BirthDay>06/06/1996</BirthDay>
+    <Email>thuyhang@gmail.com</Email>
+    <Phone>0333333333</Phone>
+    <IsActive>1</IsActive>
+  </Librarian>
+  <Librarian Id="NV003">
+    <FirstName>Hoa</FirstName>
+    <LastName>Dương Anh</LastName>
+    <Sex>Nữ</Sex>
+    <BirthDay>12/12/1999</BirthDay>
+    <Email>hoaduong@outlook.com</Email>
+    <Phone>0286486578</Phone>
+    <IsActive>0</IsActive>
+  </Librarian>
+  <Librarian Id="NV004">
+    <FirstName>Tuấn</FirstName>
+    <LastName>Lâm</LastName>
+    <Sex>Nam</Sex>
+    <BirthDay>01/01/1994</BirthDay>
+    <Email>traitimbuon@yahoo.com</Email>
+    <Phone>0782686575</Phone>
+    <IsActive>0</IsActive>
+  </Librarian>
+  <Librarian Id="NV005">
+    <FirstName>Nghĩa</FirstName>
+    <LastName>Trần Văn</LastName>
+    <Sex>Nam</Sex>
+    <BirthDay>3/3/1996</BirthDay>
+    <Email>nghiatv@gmail.com</Email>
+    <Phone>0915657582</Phone>
+    <IsActive>0</IsActive>
+  </Librarian>
+  <Librarian Id="NV006">
+    <FirstName>Quân</FirstName>
+    <LastName>Võ Minh</LastName>
+    <Sex>Khác</Sex>
+    <BirthDay>10/11/1998</BirthDay>
+    <Email>vominhquan@yahoo.com</Email>
+    <Phone>0333152658</Phone>
+    <IsActive>1</IsActive>
+  </Librarian>
+  <Librarian Id="NV007">
+    <FirstName>Vy</FirstName>
+    <LastName>Lê Tường</LastName>
+    <Sex>Nữ</Sex>
+    <BirthDay>21/12/1995</BirthDay>
+    <Email>lethituongvy@gmail.com</Email>
+    <Phone>096463296</Phone>
+    <IsActive>1</IsActive>
+  </Librarian>
+  <Librarian Id="NV008">
+    <FirstName>Quế</FirstName>
+    <LastName>Nguyễn Thị</LastName>
+    <Sex>Nữ</Sex>
+    <BirthDay>22/03/1997</BirthDay>
+    <Email>nguyetque@outlook.com</Email>
+    <Phone>0949494949</Phone>
+    <IsActive>1</IsActive>
+  </Librarian>
+</Librarians>

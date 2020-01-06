@@ -1,0 +1,135 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Members>
+  <Member Id="M00001">
+    <FirstName>Anh</FirstName>
+    <LastName>Nguyễn Vân</LastName>
+    <Sex>Nữ</Sex>
+    <BirthDay>11/10/1999</BirthDay>
+    <Email>vananh@gmail.com</Email>
+    <Phone>0333456595</Phone>
+    <IsBlock>0</IsBlock>
+    <ReasonBlock></ReasonBlock>
+    <IdLibrarianBlock></IdLibrarianBlock>
+  </Member>
+  <Member Id="M00002">
+    <FirstName>Bảo</FirstName>
+    <LastName>Phan Gia</LastName>
+    <Sex>Nam</Sex>
+    <BirthDay>30/12/1998</BirthDay>
+    <Email>18111@gmail.com</Email>
+    <Phone>0957486575</Phone>
+    <IsBlock>1</IsBlock>
+    <ReasonBlock>d</ReasonBlock>
+    <IdLibrarianBlock>NV001</IdLibrarianBlock>
+  </Member>
+  <Member Id="M00003">
+    <FirstName>Duyên</FirstName>
+    <LastName>Phan Mỹ</LastName>
+    <Sex>Nữ</Sex>
+    <BirthDay>02/01/1998</BirthDay>
+    <Email>18112@gmail.com</Email>
+    <Phone>0932586575</Phone>
+    <IsBlock>0</IsBlock>
+    <ReasonBlock></ReasonBlock>
+    <IdLibrarianBlock></IdLibrarianBlock>
+  </Member>
+  <Member Id="M00004">
+    <FirstName>Hạnh</FirstName>
+    <LastName>Nguyễn Hồng</LastName>
+    <Sex>Nam</Sex>
+    <BirthDay>21/05/2000</BirthDay>
+    <Email>18113@gmail.com</Email>
+    <Phone>0911865575</Phone>
+    <IsBlock>0</IsBlock>
+    <ReasonBlock></ReasonBlock>
+    <IdLibrarianBlock></IdLibrarianBlock>
+  </Member>
+  <Member Id="M00005">
+    <FirstName>Hưng</FirstName>
+    <LastName>Đặng Văn</LastName>
+    <Sex>Nam</Sex>
+    <BirthDay>02/12/1999</BirthDay>
+    <Email>18114@gmail.com</Email>
+    <Phone>0357486575</Phone>
+    <IsBlock>0</IsBlock>
+    <ReasonBlock></ReasonBlock>
+    <IdLibrarianBlock>NV001</IdLibrarianBlock>
+  </Member>
+  <Member Id="M00006">
+    <FirstName>Khang</FirstName>
+    <LastName>Lê Tiến</LastName>
+    <Sex>Nam</Sex>
+    <BirthDay>8/5/2000</BirthDay>
+    <Email>18115@gmail.com</Email>
+    <Phone>0877486575</Phone>
+    <IsBlock>1</IsBlock>
+    <ReasonBlock></ReasonBlock>
+    <IdLibrarianBlock>NV001</IdLibrarianBlock>
+  </Member>
+  <Member Id="M00007">
+    <FirstName>Linh</FirstName>
+    <LastName>Phạm Mỹ</LastName>
+    <Sex>Nữ</Sex>
+    <BirthDay>10/4/2000</BirthDay>
+    <Email>18116@gmail.com</Email>
+    <Phone>0897486575</Phone>
+    <IsBlock>0</IsBlock>
+    <ReasonBlock></ReasonBlock>
+    <IdLibrarianBlock></IdLibrarianBlock>
+  </Member>
+  <Member Id="M00008">
+    <FirstName>Minh</FirstName>
+    <LastName>Lê Gia</LastName>
+    <Sex>Nam</Sex>
+    <BirthDay>06/02/1997</BirthDay>
+    <Email>18117@gmail.com</Email>
+    <Phone>0877486575</Phone>
+    <IsBlock>1</IsBlock>
+    <ReasonBlock></ReasonBlock>
+    <IdLibrarianBlock>NV000</IdLibrarianBlock>
+  </Member>
+  <Member Id="M00009">
+    <FirstName>Nhi</FirstName>
+    <LastName>Lê Thị Yến</LastName>
+    <Sex>Nữ</Sex>
+    <BirthDay>7/11/2000</BirthDay>
+    <Email>18118@gmail.com</Email>
+    <Phone>0747486575</Phone>
+    <IsBlock>0</IsBlock>
+    <ReasonBlock></ReasonBlock>
+    <IdLibrarianBlock></IdLibrarianBlock>
+  </Member>
+  <Member Id="M00010">
+    <FirstName>Thảo</FirstName>
+    <LastName>Nguyễn Thu</LastName>
+    <Sex>Nữ</Sex>
+    <BirthDay>20/11/2000</BirthDay>
+    <Email>18119@gmail.com</Email>
+    <Phone>0527486575</Phone>
+    <IsBlock>0</IsBlock>
+    <ReasonBlock></ReasonBlock>
+    <IdLibrarianBlock></IdLibrarianBlock>
+  </Member>
+  <Member Id="M00011">
+    <FirstName>Vũ</FirstName>
+    <LastName>Trần Minh</LastName>
+    <Sex>Nam</Sex>
+    <BirthDay>19/05/1997</BirthDay>
+    <Email>18120@gmail.com</Email>
+    <Phone>0632486575</Phone>
+    <IsBlock>0</IsBlock>
+    <ReasonBlock></ReasonBlock>
+    <IdLibrarianBlock></IdLibrarianBlock>
+  </Member>
+  <Member Id="M00012">
+    <FirstName>Ly</FirstName>
+    <LastName>Nguyễn Hương</LastName>
+    <Sex>Nữ</Sex>
+    <BirthDay>22/12/1996</BirthDay>
+    <Email>huongly@yahoo.com</Email>
+    <Phone>0969495258</Phone>
+    <IsBlock>0</IsBlock>
+    <IdLibrarianBlock></IdLibrarianBlock>
+    <ReasonBlock></ReasonBlock>
+  </Member>
+</Members>

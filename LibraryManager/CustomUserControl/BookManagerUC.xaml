@@ -1,0 +1,283 @@
+﻿<UserControl x:Class="LibraryManager.CustomUserControl.BookManagerUC"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:LibraryManager.CustomUserControl"
+             mc:Ignorable="d" 
+             
+             d:DesignHeight="708" d:DesignWidth="1306"
+             xmlns:uc="clr-namespace:LibraryManager.CustomUserControl"
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+             x:Name="bookManagerUC" 
+             Background="#fafafa">
+
+    <!--Bắt phím tắt-->
+    <UserControl.InputBindings>
+        <KeyBinding Command="{Binding BorrowBookButtonCommand}"
+                    CommandParameter="{Binding ElementName=librarianWindow}"
+                    Gesture="CTRL+B" />
+
+        <KeyBinding Command="{Binding ReturnBookButtonCommand}"
+                    CommandParameter="{Binding ElementName=librarianWindow}"
+                    Gesture="CTRL+R" />
+
+        <KeyBinding Command="{Binding ExitCommand}"
+                    CommandParameter="{Binding ElementName=librarianWindow}"
+                    Gesture="CTRL+E" />
+    </UserControl.InputBindings>
+
+    <UserControl.Resources>
+        <Style TargetType="Button" BasedOn="{StaticResource MaterialDesignRaisedDarkButton}">
+            <Setter Property="materialDesign:ButtonAssist.CornerRadius" Value="10"/>
+            <Setter Property="Background" Value="#001e51"/>
+            <Setter Property="VerticalAlignment" Value="Stretch"/>
+            <Setter Property="HorizontalAlignment" Value="Stretch"/>
+            <Setter Property="Height" Value="auto"/>
+            <Setter Property="Width" Value="auto"/>
+            <Setter Property="FontSize" Value="25"/>
+            <Setter Property="Margin" Value="10 0"/>
+        </Style>
+        <Style TargetType="materialDesign:PackIcon">
+            <Setter Property="Height" Value="48"/>
+            <Setter Property="Width" Value="48"/>
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+        </Style>
+        <Style TargetType="TextBlock">
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+            <Setter Property="FontSize" Value="30"/>
+        </Style>
+    </UserControl.Resources>
+    
+    <materialDesign:Card materialDesign:ShadowAssist.ShadowDepth="Depth3" Padding="0"  Margin="10 10 5 10" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition/>
+                <RowDefinition Height="auto"/>
+            </Grid.RowDefinitions>
+
+            <!--Button -->
+            <Grid Grid.Row="0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+
+                <Button Command="{Binding BorrowBookButtonCommand}"
+                        CommandParameter="{Binding ElementName=bookManagerUC}"
+                        ToolTip="Thực hiện cho mượn sách"
+                        Margin="10" Grid.Column="0">
+                    <StackPanel Orientation="Horizontal">
+                        <materialDesign:PackIcon Kind="ArrowLeftBoldCircle" />
+                        <TextBlock Text="MƯỢN SÁCH" Margin="20 0"/>
+                    </StackPanel>
+                </Button>
+
+                <Button ToolTip="Thực hiện nhận sách"
+                        Command="{Binding ReturnBookButtonCommand}"
+                        CommandParameter="{Binding ElementName=bookManagerUC}"
+                        Margin="10" Grid.Column="1">
+                    <StackPanel Orientation="Horizontal">
+                        <materialDesign:PackIcon Kind="ArrowRightBoldCircle"  />
+                        <TextBlock Text="TRẢ SÁCH" Margin="20 0"/>
+                    </StackPanel>
+                </Button>
+
+            </Grid>
+
+            <!-- Filter List -->
+            <Grid Grid.Row="1" Margin="10 20">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition Width="auto"/>
+                </Grid.ColumnDefinitions>
+                
+                <Grid Grid.Column="0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="auto"/>
+                        <ColumnDefinition />
+                    </Grid.ColumnDefinitions>
+                    
+                    <materialDesign:PackIcon Kind="BookSearch" Height="36" Width="36" VerticalAlignment="Bottom" Grid.Column="0"/>
+
+                    <TextBox materialDesign:HintAssist.Hint="Tên sách"
+                             x:Name="tbxSearchBook"
+                             Style="{StaticResource MaterialDesignFloatingHintTextBox}"
+                             VerticalAlignment="Center"
+                             FontSize="18"
+                             Grid.Column="1">
+                        <i:Interaction.Triggers>
+                            <i:EventTrigger EventName="TextChanged">
+                                <i:InvokeCommandAction Command="{Binding TextboxSearchChangeCommand}" CommandParameter="{Binding ElementName=tbxSearchBook}"></i:InvokeCommandAction>
+                            </i:EventTrigger>
+                        </i:Interaction.Triggers>
+                    </TextBox>
+                </Grid>
+                <Grid Grid.Column="1">
+                    <ComboBox materialDesign:HintAssist.Hint="Loại sách"
+                              x:Name="cbxBookCategory"
+                              MinWidth="72"
+                              Margin="20 0"
+                              VerticalAlignment="Bottom"
+                              DisplayMemberPath="Name"
+                              FontSize="14"
+                              ItemsSource="{Binding ListBookCategory }"
+                              SelectedValue="{Binding BookCategorySelected}">
+                        <i:Interaction.Triggers>
+                            <i:EventTrigger EventName="SelectionChanged">
+                                <i:InvokeCommandAction Command="{Binding ChangeBookCategorySelectedCommand}" CommandParameter="{Binding ElementName=cbxBookCategory, Path=SelectedValue}"/>
+                            </i:EventTrigger>
+                        </i:Interaction.Triggers>
+                    </ComboBox>
+                </Grid>
+                <Grid Grid.Column="2">
+                    <Button Command="{Binding ExportToExcelCommand}"
+                            Content="XUẤT FILE EXCEL"
+                            ToolTip="Xuất danh sách sách trong thư viện ra file Excel"
+                            FontSize="18">
+                    </Button>
+                </Grid>
+            </Grid>
+
+            <!-- List -->
+            <Grid Grid.Row="2">
+                <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto">
+                    <ListView ItemsSource="{Binding ListBookItem, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" 
+                              VerticalAlignment="Stretch" HorizontalAlignment="Stretch"
+                              SelectedItem="{Binding BookItemSelected, UpdateSourceTrigger=PropertyChanged}">
+                        <ListView.View>
+                            <GridView>
+                                <GridViewColumn Header="Mã" Width="auto">
+                                    <GridViewColumn.CellTemplate>
+                                        <DataTemplate>
+                                            <TextBlock Foreground="Black" Text="{Binding IdBook}"/>
+                                        </DataTemplate>
+                                    </GridViewColumn.CellTemplate>
+                                </GridViewColumn>
+
+                                <GridViewColumn Header="Tên sách" Width="300">
+                                    <GridViewColumn.CellTemplate>
+                                        <DataTemplate>
+                                            <TextBlock Foreground="Black" Text="{Binding Book.Name}"/>
+                                        </DataTemplate>
+                                    </GridViewColumn.CellTemplate>
+                                </GridViewColumn>
+
+                                <GridViewColumn Header="Loại" Width="200">
+                                    <GridViewColumn.CellTemplate>
+                                        <DataTemplate>
+                                            <TextBlock Foreground="Black" Text="{Binding Book.BookCategory}"/>
+                                        </DataTemplate>
+                                    </GridViewColumn.CellTemplate>
+                                </GridViewColumn>
+
+                                <GridViewColumn Header="Tác giả" Width="150">
+                                    <GridViewColumn.CellTemplate>
+                                        <DataTemplate>
+                                            <TextBlock Foreground="Black" Text="{Binding Book.Author}"/>
+                                        </DataTemplate>
+                                    </GridViewColumn.CellTemplate>
+                                </GridViewColumn>
+
+                                <GridViewColumn Header="Nhà xuất bản" Width="200">
+                                    <GridViewColumn.CellTemplate>
+                                        <DataTemplate>
+                                            <TextBlock Foreground="Black" Text="{Binding Book.Publisher}"/>
+                                        </DataTemplate>
+                                    </GridViewColumn.CellTemplate>
+                                </GridViewColumn>
+
+                                <GridViewColumn Header="Năm XB" Width="100">
+                                    <GridViewColumn.CellTemplate>
+                                        <DataTemplate>
+                                            <TextBlock Foreground="Black" Text="{Binding Book.YearPublish}"/>
+                                        </DataTemplate>
+                                    </GridViewColumn.CellTemplate>
+                                </GridViewColumn>
+                                
+                                <GridViewColumn Header="Giá"  Width="75">
+                                    <GridViewColumn.CellTemplate>
+                                        <DataTemplate>
+                                            <TextBlock Foreground="Black" Text="{Binding Book.Price}"/>
+                                        </DataTemplate>
+                                    </GridViewColumn.CellTemplate>
+                                </GridViewColumn>
+                                
+                                <GridViewColumn Header="Tổng số" Width="80">
+                                    <GridViewColumn.CellTemplate>
+                                        <DataTemplate>
+                                            <TextBlock Foreground="Black" Text="{Binding Number}"/>
+                                        </DataTemplate>
+                                    </GridViewColumn.CellTemplate>
+                                </GridViewColumn>
+                                
+                                <GridViewColumn Header="Còn lại" Width="80">
+                                    <GridViewColumn.CellTemplate>
+                                        <DataTemplate>
+                                            <TextBlock Foreground="Black" Text="{Binding Counter}"/>
+                                        </DataTemplate>
+                                    </GridViewColumn.CellTemplate>
+                                </GridViewColumn>
+                            </GridView>
+                        </ListView.View>
+                    </ListView>
+                </ScrollViewer>
+            </Grid>
+
+            <!--Button -->
+            <Grid Grid.Row="3">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+
+                <Button Command="{Binding AddBookItemButtonCommand}"
+                        ToolTip="Nhập sách mới vào thư viện"
+                        Margin="10" Grid.Column="0">
+                    <StackPanel Orientation="Horizontal">
+                        <materialDesign:PackIcon Kind="ArrowTopBoldCircle" />
+                        <TextBlock Text="NHẬP SÁCH" Margin="10 0"/>
+                    </StackPanel>
+                </Button>
+
+                <Button ToolTip="Cập nhật lại thông tin sách"
+                        Command="{Binding UpdateBookItemButtonCommand}"
+                        Margin="10" Grid.Column="1">
+                    <StackPanel Orientation="Horizontal">
+                        <materialDesign:PackIcon Kind="NewReleases"/>
+                        <TextBlock Text="CẬP NHẬT" Margin="10 0"/>
+                    </StackPanel>
+                </Button>
+
+                <Button ToolTip="Thực hiện xuất sách"
+                        Command="{Binding ExportBookItemButtonCommand}"
+                        CommandParameter="{Binding ElementName=bookManagerUC}"
+                        Margin="10" Grid.Column="2">
+                    <StackPanel Orientation="Horizontal">
+                        <materialDesign:PackIcon Kind="ArrowBottomBoldCircle"/>
+                        <TextBlock Text="XUẤT SÁCH" Margin="10 0"/>
+                    </StackPanel>
+                </Button>
+
+                <Button ToolTip="Thống kê những người mượn sách"
+                        Command="{Binding StatisticBookItemButtonCommand}"
+                        CommandParameter="{Binding ElementName=bookManagerUC}"
+                        Margin="10" Grid.Column="3">
+                    <StackPanel Orientation="Horizontal">
+                        <materialDesign:PackIcon Kind="FileReport" />
+                        <TextBlock Text="THỐNG KÊ" Margin="10 0"/>
+                    </StackPanel>
+                </Button>
+
+            </Grid>
+        </Grid>
+    </materialDesign:Card>
+</UserControl>

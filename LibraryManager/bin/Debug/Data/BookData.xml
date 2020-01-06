@@ -1,0 +1,151 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Books>
+  <Book Id="B00001">
+    <Name>Cấu trúc dữ liệu và giải thuật</Name>
+    <Author>Lê Văn Vinh</Author>
+    <Publisher>Đại học Quốc gia TPHCM</Publisher>
+    <YearPublish>2013</YearPublish>
+    <IdBookCategory>GT</IdBookCategory>
+    <Price>28000</Price>
+    <IsBorrow></IsBorrow>
+    <IsCheckout></IsCheckout>
+  </Book>
+  <Book Id="B00002">
+    <Name>Kỹ thuật lập trình</Name>
+    <Author>Trần Đan Thư</Author>
+    <Publisher>Khoa học kỹ thuật</Publisher>
+    <YearPublish>2014</YearPublish>
+    <IdBookCategory>CNTT</IdBookCategory>
+    <Price>64000</Price>
+    <IsBorrow></IsBorrow>
+    <IsCheckout></IsCheckout>
+  </Book>
+  <Book Id="B00003">
+    <Name>Lập trình hướng đối tượng</Name>
+    <Author>Trần Đan Thư</Author>
+    <Publisher>Khoa học kỹ thuật</Publisher>
+    <YearPublish>2014</YearPublish>
+    <IdBookCategory>CNTT</IdBookCategory>
+    <Price>50000</Price>
+    <IsBorrow></IsBorrow>
+    <IsCheckout></IsCheckout>
+  </Book>
+  <Book Id="B00004">
+    <Name>Nhập môn lập trình</Name>
+    <Author>Trần Đan Thư</Author>
+    <Publisher>Khoa học kỹ thuật</Publisher>
+    <YearPublish>2014</YearPublish>
+    <IdBookCategory>CNTT</IdBookCategory>
+    <Price>49000</Price>
+    <IsBorrow></IsBorrow>
+    <IsCheckout></IsCheckout>
+  </Book>
+  <Book Id="B00005">
+    <Name>Tư tưởng Hồ Chí Minh</Name>
+    <Author>Phạm Ngọc Anh</Author>
+    <Publisher>Chính trị quốc gia</Publisher>
+    <YearPublish>2011</YearPublish>
+    <IdBookCategory>GT</IdBookCategory>
+    <Price>35000</Price>
+    <IsBorrow></IsBorrow>
+    <IsCheckout></IsCheckout>
+  </Book>
+  <Book Id="B00006">
+    <Name>Những nguyên lý cơ bản chủ nghĩa Mac</Name>
+    <Author>Phan Mạnh Tiến</Author>
+    <Publisher>Chính trị quốc gia</Publisher>
+    <YearPublish>2010</YearPublish>
+    <IdBookCategory>LLCT</IdBookCategory>
+    <Price>40000</Price>
+    <IsBorrow></IsBorrow>
+    <IsCheckout></IsCheckout>
+  </Book>
+  <Book Id="B00007">
+    <Name>Trên đường băng</Name>
+    <Author>Tony</Author>
+    <Publisher>Trẻ</Publisher>
+    <YearPublish>2018</YearPublish>
+    <IdBookCategory>KNS</IdBookCategory>
+    <Price>60000</Price>
+    <IsBorrow></IsBorrow>
+    <IsCheckout></IsCheckout>
+  </Book>
+  <Book Id="B00008">
+    <Name>Cà phê cùng Tony</Name>
+    <Author>Tony</Author>
+    <Publisher>Trẻ</Publisher>
+    <YearPublish>2016</YearPublish>
+    <IdBookCategory>KNS</IdBookCategory>
+    <Price>58000</Price>
+    <IsBorrow></IsBorrow>
+    <IsCheckout></IsCheckout>
+  </Book>
+  <Book Id="B00009">
+    <Name>Hackers IELTS: Speaking</Name>
+    <Author>Viện ngôn ngữ Hackers</Author>
+    <Publisher>Thế giới</Publisher>
+    <YearPublish>2019</YearPublish>
+    <IdBookCategory>TA</IdBookCategory>
+    <Price>159200</Price>
+    <IsBorrow></IsBorrow>
+    <IsCheckout></IsCheckout>
+  </Book>
+  <Book Id="B00010">
+    <Name>Hackers IELTS: Writing</Name>
+    <Author>Viện ngôn ngữ Hackers</Author>
+    <Publisher>Thế giới</Publisher>
+    <YearPublish>2019</YearPublish>
+    <IdBookCategory>TA</IdBookCategory>
+    <Price>180200</Price>
+    <IsBorrow></IsBorrow>
+    <IsCheckout></IsCheckout>
+  </Book>
+  <Book Id="B00012">
+    <Name>Hackers IELTS: Listening</Name>
+    <Author>Viện ngôn ngữ Hackers</Author>
+    <Publisher>Thế giới</Publisher>
+    <YearPublish>2019</YearPublish>
+    <IdBookCategory>TA</IdBookCategory>
+    <Price>119600</Price>
+    <IsBorrow></IsBorrow>
+    <IsCheckout></IsCheckout>
+  </Book>
+  <Book Id="B00013">
+    <Name>Marugoto Sơ cấp 1</Name>
+    <Author>The Japan Foundation</Author>
+    <Publisher>Đại học Quốc gia TPHCM</Publisher>
+    <YearPublish>2019</YearPublish>
+    <IdBookCategory>TN</IdBookCategory>
+    <Price>129600</Price>
+    <IsBorrow></IsBorrow>
+    <IsCheckout></IsCheckout>
+  </Book>
+  <Book Id="B00014">
+    <Name>Marugoto Sơ cấp 2</Name>
+    <Author>The Japan Foundation</Author>
+    <Publisher>Đại học Quốc gia TPHCM</Publisher>
+    <YearPublish>2019</YearPublish>
+    <IdBookCategory>TN</IdBookCategory>
+    <Price>116000</Price>
+    <IsBorrow></IsBorrow>
+    <IsCheckout></IsCheckout>
+  </Book>
+  <Book Id="B00015">
+    <Name>Marugoto Sơ cấp 3</Name>
+    <Author>The Japan Foundation</Author>
+    <Publisher>Đại học Quốc gia TPHCM</Publisher>
+    <YearPublish>2019</YearPublish>
+    <IdBookCategory>TN</IdBookCategory>
+    <Price>215000</Price>
+    <IsBorrow></IsBorrow>
+    <IsCheckout></IsCheckout>
+  </Book>
+  <Book Id="B00016">
+    <Name>Tư Tưởng Hồ Chí Minh</Name>
+    <Author>Võ Văn Vỹ</Author>
+    <Publisher>Chính trị Quốc gia</Publisher>
+    <YearPublish>2013</YearPublish>
+    <IdBookCategory>LLCT</IdBookCategory>
+    <Price>45000</Price>
+  </Book>
+</Books>

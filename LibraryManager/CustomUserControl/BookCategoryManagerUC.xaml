@@ -1,0 +1,220 @@
+﻿<UserControl x:Class="LibraryManager.CustomUserControl.BookCategoryManagerUC"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:LibraryManager.CustomUserControl"
+             
+             mc:Ignorable="d"
+             d:DesignHeight="708" d:DesignWidth="1306"
+             
+             xmlns:uc="clr-namespace:LibraryManager.CustomUserControl"
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+             x:Name="bookCategoryManagerUC"
+             
+             DataContext="{StaticResource BookCategoryManagerUCVM}"
+             
+             Background="#fafafa">
+    <Grid>
+        <Grid.Resources>
+            <Style TargetType="Button" BasedOn="{StaticResource MaterialDesignRaisedDarkButton}">
+                <Setter Property="materialDesign:ButtonAssist.CornerRadius" Value="10"/>
+                <Setter Property="Background" Value="#001e51"/>
+                <Setter Property="VerticalAlignment" Value="Stretch"/>
+                <Setter Property="HorizontalAlignment" Value="Stretch"/>
+                <Setter Property="Height" Value="auto"/>
+                <Setter Property="Width" Value="auto"/>
+                <Setter Property="FontSize" Value="25"/>
+                <Setter Property="Margin" Value="5 5"/>
+            </Style>
+
+            <Style TargetType="materialDesign:PackIcon">
+                <Setter Property="Height" Value="30"/>
+                <Setter Property="Width" Value="30"/>
+                <Setter Property="Margin" Value="10 0"/>
+                <Setter Property="HorizontalAlignment" Value="Center"/>
+                <Setter Property="VerticalAlignment" Value="Center"/>
+            </Style>
+        </Grid.Resources>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="7*"/>
+            <ColumnDefinition Width="3*"/>
+        </Grid.ColumnDefinitions>
+
+        <!-- List nhân viên thư viện-->
+        <Grid Grid.Column="0">
+            <materialDesign:Card materialDesign:ShadowAssist.ShadowDepth="Depth3" Padding="0"  Margin="10 10 5 10" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+
+                    <!-- CÁC CHUYÊN MỤC SÁCH-->
+                    <Grid Grid.Row="0">
+                        <Grid Grid.Row="0">
+                            <TextBlock Text="CÁC CHUYÊN MỤC SÁCH"
+                                       HorizontalAlignment="Center" VerticalAlignment="Center"
+                                       FontSize="30" FontWeight="DemiBold" Foreground="#001e51"
+                                       Margin="10 30 10 10" />
+                        </Grid>
+                    </Grid>
+
+                    <!-- List CHUYÊN MỤC SÁCH-->
+                    <Grid Grid.Row="1">
+                        <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto">
+                            <ListView ItemsSource="{Binding ListBookCategory, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" 
+                                      VerticalAlignment="Stretch" 
+                                      HorizontalAlignment="Stretch"
+                                      Foreground="Black"
+                                      SelectedItem="{Binding BookCategorySelected, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}">
+                                <i:Interaction.Triggers>
+                                    <i:EventTrigger EventName="SelectionChanged">
+                                        <i:InvokeCommandAction Command="{Binding LibrarianSelectedChanged}" CommandParameter="{Binding ElementName=librarianManagerUC}"/>
+                                    </i:EventTrigger>
+                                </i:Interaction.Triggers>
+                                <ListView.View>
+                                    <GridView>
+                                        <GridViewColumn Header="Mã chuyên mục">
+                                            <GridViewColumn.CellTemplate>
+                                                <DataTemplate>
+                                                    <TextBlock Foreground="Black" Text="{Binding Id}"></TextBlock>
+                                                </DataTemplate>
+                                            </GridViewColumn.CellTemplate>
+                                        </GridViewColumn>
+
+                                        <GridViewColumn Header="Tên chuyên mục">
+                                            <GridViewColumn.CellTemplate>
+                                                <DataTemplate>
+                                                    <TextBlock Foreground="Black" Text="{Binding Name}"></TextBlock>
+                                                </DataTemplate>
+                                            </GridViewColumn.CellTemplate>
+                                        </GridViewColumn>
+
+                                        <GridViewColumn Header="Số ngày cho mượn">
+                                            <GridViewColumn.CellTemplate>
+                                                <DataTemplate>
+                                                    <TextBlock Foreground="Black" Text="{Binding BorrowTime}"></TextBlock>
+                                                </DataTemplate>
+                                            </GridViewColumn.CellTemplate>
+                                        </GridViewColumn>
+
+                                        <GridViewColumn Header="Số lượng sách">
+                                            <GridViewColumn.CellTemplate>
+                                                <DataTemplate>
+                                                    <TextBlock Foreground="Black" Text="{Binding NumberOfBook}"></TextBlock>
+                                                </DataTemplate>
+                                            </GridViewColumn.CellTemplate>
+                                        </GridViewColumn>
+
+                                    </GridView>
+                                </ListView.View>
+                            </ListView>
+                        </ScrollViewer>
+                    </Grid>
+                </Grid>
+            </materialDesign:Card>
+        </Grid>
+
+        <Grid Grid.Column="1">
+            <materialDesign:Card materialDesign:ShadowAssist.ShadowDepth="Depth3" Padding="0"  Margin="5 10 10 10" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition  Height="auto"/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+
+                    <!---Thông tin CHUYÊN MỤC-->
+                    <Grid Grid.Row="0">
+                        <StackPanel>
+                            <StackPanel.Resources>
+                                <Style TargetType="TextBox" BasedOn="{StaticResource MaterialDesignFloatingHintTextBox}">
+                                    <Setter Property="VerticalAlignment" Value="Center"/>
+                                    <Setter Property="Margin" Value="20 10"/>
+                                    <Setter Property="FontSize" Value="18"/>
+                                </Style>
+                                <Style TargetType="TextBlock">
+                                    <Setter Property="Visibility" Value="Hidden"/>
+                                    <Setter Property="Foreground" Value="Red"/>
+                                    <Setter Property="Margin" Value="20 -2" />
+                                </Style>
+                            </StackPanel.Resources>
+
+                            <!---Tiêu đề "THÔNG TIN CHUYÊN MỤC SÁCH"-->
+                            <TextBlock Text="CHUYÊN MỤC SÁCH" Visibility="Visible"
+                                       HorizontalAlignment="Center" VerticalAlignment="Center"
+                                       FontSize="30" FontWeight="DemiBold" Foreground="#001e51" 
+                                       Margin="10 30 10 80" />
+
+                            <!---Mã CHUYÊN MỤC-->
+                            <TextBox materialDesign:HintAssist.Hint="Mã chuyên mục" IsReadOnly="True"
+                                     Text="{Binding BookCategorySelected.Id, UpdateSourceTrigger=PropertyChanged, Mode=OneWay}"/>
+
+                            <!---TÊn chuyên mục-->
+                            <TextBox materialDesign:HintAssist.Hint="Tên chuyên mục" x:Name="tbxName"
+                                     Text="{Binding BookCategorySelected.Name, UpdateSourceTrigger=PropertyChanged, Mode=OneWay}"/>
+
+                            <TextBlock Text="Tên chuyên mục không được để trống" x:Name="tblNameWarning"/>
+
+                            <!---Tên-->
+                            <TextBox materialDesign:HintAssist.Hint="Số ngày cho mượn" x:Name="tbxBorrowTime"
+                                     Text="{Binding BookCategorySelected.BorrowTime, UpdateSourceTrigger=PropertyChanged, Mode=OneWay}"/>
+
+                            <TextBlock Text="Vui lòng nhập số nguyên dương" x:Name="tblBorrowTimeWarning"/>
+
+                            <!---Số lượng sách-->
+                            <TextBox materialDesign:HintAssist.Hint="Số lượng sách" IsReadOnly="True" Margin="20 10 20 50"
+                                         Text="{Binding BookCategorySelected.NumberOfBook, UpdateSourceTrigger=PropertyChanged, Mode=OneWay}"/>
+
+                        </StackPanel>
+                    </Grid>
+
+                    <!--Button-->
+                    <Grid Grid.Row="1">
+                        <Grid.RowDefinitions>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                        </Grid.RowDefinitions>
+
+                        <!---Button Thêm-->
+                        <Grid Grid.Column="0">
+                            <Button ToolTip="Thêm chuyên mục sách mới" 
+                                    Command="{Binding AddBookCategoryCommand}">
+                                <StackPanel Orientation="Horizontal">
+                                    <materialDesign:PackIcon Kind="PenAdd" HorizontalAlignment="Center"/>
+                                    <TextBlock Text="THÊM"></TextBlock>
+                                </StackPanel>
+                            </Button>
+                        </Grid>
+
+                        <!---Button Cập nhật-->
+                        <Grid Grid.Row="1">
+                            <Button ToolTip="Cập nhật lại thông tin chuyên mục sách"
+                                    Command="{Binding UpdateBookCategoryCommand}"
+                                    CommandParameter="{Binding ElementName=bookCategoryManagerUC}">
+                                <StackPanel Orientation="Horizontal">
+                                    <materialDesign:PackIcon Kind="Pen" HorizontalAlignment="Center"/>
+                                    <TextBlock Text="CẬP NHẬT"></TextBlock>
+                                </StackPanel>
+                            </Button>
+                        </Grid>
+
+                        <!---Button Xóa-->
+                        <Button Grid.Row="2"
+                                ToolTip="Xóa chuyên mục sách"
+                                Command="{Binding RemoveBookCategoryCommand}">
+                            <StackPanel Orientation="Horizontal">
+                                <materialDesign:PackIcon Kind="PenRemove" HorizontalAlignment="Left" />
+                                <TextBlock Text="XÓA"></TextBlock>
+                            </StackPanel>
+                        </Button>
+                    </Grid>
+
+                </Grid>
+            </materialDesign:Card>
+        </Grid>
+    </Grid>
+</UserControl>

@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Users>
+  <User PersonID="NV001">
+    <Username>NV001</Username>
+    <Password>4736d731d645b7eaec7d6b3ce6f4eaf6</Password>
+  </User>
+  <User PersonID="NV002">
+    <Username>NV002</Username>
+    <Password>64867d6455bce0d1017bff6ed5998488</Password>
+  </User>
+  <User PersonID="NV003">
+    <Username>NV003</Username>
+    <Password>c98ba98d6985a9ff648c205681298e73</Password>
+  </User>
+  <User PersonID="NV004">
+    <Username>NV004</Username>
+    <Password>30423e98ca25931e3241b1563c48eebb</Password>
+  </User>
+  <User PersonID="NV005">
+    <Username>NV005</Username>
+    <Password>93d78f58707bd68accbfeb28184bf680</Password>
+  </User>
+  <User PersonID="NV006">
+    <Username>NV006</Username>
+    <Password>ccf5d885346fc01f0ca95698142cd103</Password>
+  </User>
+  <User PersonID="NV007">
+    <Username>NV007</Username>
+    <Password>125085c6e17e59fea1c62fb1428b9f26</Password>
+  </User>
+  <User PersonID="NV008">
+    <Username>NV008</Username>
+    <Password>ac0a95b68139398790fe862d80c0000f</Password>
+  </User>
+</Users>

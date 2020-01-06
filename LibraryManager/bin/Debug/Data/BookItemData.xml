@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BookItems>
+  <BookItem IdBook="B00001">
+    <Number>30</Number>
+    <Counter>29</Counter>
+  </BookItem>
+  <BookItem IdBook="B00002">
+    <Number>30</Number>
+    <Counter>29</Counter>
+  </BookItem>
+  <BookItem IdBook="B00003">
+    <Number>30</Number>
+    <Counter>30</Counter>
+  </BookItem>
+  <BookItem IdBook="B00004">
+    <Number>30</Number>
+    <Counter>30</Counter>
+  </BookItem>
+  <BookItem IdBook="B00005">
+    <Number>30</Number>
+    <Counter>30</Counter>
+  </BookItem>
+  <BookItem IdBook="B00006">
+    <Number>30</Number>
+    <Counter>30</Counter>
+  </BookItem>
+  <BookItem IdBook="B00007">
+    <Number>10</Number>
+    <Counter>10</Counter>
+  </BookItem>
+  <BookItem IdBook="B00008">
+    <Number>5</Number>
+    <Counter>4</Counter>
+  </BookItem>
+  <BookItem IdBook="B00009">
+    <Number>2</Number>
+    <Counter>2</Counter>
+  </BookItem>
+  <BookItem IdBook="B00010">
+    <Number>2</Number>
+    <Counter>0</Counter>
+  </BookItem>
+  <BookItem IdBook="B00012">
+    <Number>2</Number>
+    <Counter>1</Counter>
+  </BookItem>
+  <BookItem IdBook="B00013">
+    <Number>3</Number>
+    <Counter>3</Counter>
+  </BookItem>
+  <BookItem IdBook="B00014">
+    <Number>3</Number>
+    <Counter>2</Counter>
+  </BookItem>
+  <BookItem IdBook="B00015">
+    <Number>3</Number>
+    <Counter>1</Counter>
+  </BookItem>
+  <BookItem IdBook="B00016">
+    <Number>20</Number>
+    <Counter>20</Counter>
+  </BookItem>
+</BookItems>

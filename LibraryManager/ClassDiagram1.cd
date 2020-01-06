@@ -1,0 +1,231 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="LibraryManager.Model.Librarian">
+    <Position X="0.75" Y="1.25" Width="2.5" />
+    <Compartments>
+      <Compartment Name="Nested Types" Collapsed="false" />
+    </Compartments>
+    <NestedTypes>
+      <Class Name="LibraryManager.Model.Librarian.AutoLibrarianID">
+        <TypeIdentifier>
+          <NewMemberFileName>Model\Librarian.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAQggAAAAAAAAAAAEAAAABAAAAAAAAAAACAAAAEAAAA=</HashCode>
+      <FileName>Model\Librarian.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LibraryManager.Model.Person">
+    <Position X="4" Y="0.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAQCAEAAACBABIAgAAQAAAgAAAAIAAAgACAAKAAAAgg=</HashCode>
+      <FileName>Model\Person.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LibraryManager.Model.Member">
+    <Position X="6.75" Y="1.25" Width="3" />
+    <Compartments>
+      <Compartment Name="Nested Types" Collapsed="false" />
+    </Compartments>
+    <NestedTypes>
+      <Class Name="LibraryManager.Model.Member.AutoMemberID">
+        <TypeIdentifier>
+          <NewMemberFileName>Model\Member.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAQEAABAAAAAQAAAAAAAAAABSAAAAQAAACAAAAEADAA=</HashCode>
+      <FileName>Model\Member.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LibraryManager.Model.User">
+    <Position X="11" Y="1" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>wAAAAIAAAAAAAAAAAQAAAAEAAABAAAACAAAQAgAAAAA=</HashCode>
+      <FileName>Model\User.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LibraryManager.ViewModel.AccountSetttingUCViewModel" Collapsed="true">
+    <Position X="8.75" Y="11.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QABACAAACAAAQAAAAAAAAAEAAAgBAAAAAAAAAABAAAA=</HashCode>
+      <FileName>ViewModel\AccountSetttingUCViewModel.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="LibraryManager.ViewModel.AddBookCategoryWindowViewModel" Collapsed="true">
+    <Position X="7" Y="13" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ViewModel\AddBookCategoryWindowViewModel.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="LibraryManager.ViewModel.AddBookItemWindowViewModel" Collapsed="true">
+    <Position X="3.5" Y="13" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAACAgAAAAAAAAEAQAAAAAAAQAAAAEgAAAAAAAAAAA=</HashCode>
+      <FileName>ViewModel\AddBookItemWindowViewModel.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="LibraryManager.ViewModel.AddPersonWindowViewModel" Collapsed="true">
+    <Position X="7" Y="11.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAACAAAQAAAAEAEAAAAAAEAAAgBAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ViewModel\AddPersonWindowViewModel.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="LibraryManager.ViewModel.BookCategoryManagerUCViewModel" Collapsed="true">
+    <Position X="17.75" Y="8.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAAAAgAAAAAAAIAAQAAAAAAAQAAAAEgAAAAAAAAAAA=</HashCode>
+      <FileName>ViewModel\BookCategoryManagerUCViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LibraryManager.ViewModel.BookManagerUCViewModel" Collapsed="true">
+    <Position X="21.5" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAQgAAAAoAAACAAAABAAhgQcAAAEigAAAAAAAgAA=</HashCode>
+      <FileName>ViewModel\BookManagerUCViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LibraryManager.ViewModel.BorrowBookUCViewModel" Collapsed="true">
+    <Position X="30.5" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACgAAAEAAAABAAAAIAAAgAAAAAAIDAAACAQEAAQABiA=</HashCode>
+      <FileName>ViewModel\BorrowBookUCViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LibraryManager.ViewModel.ControlBarViewModel" Collapsed="true">
+    <Position X="5.25" Y="13" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgAAAAACAAAAABAAAAAAAAAAAAAACAAAAAAAAAAAAA=</HashCode>
+      <FileName>ViewModel\ControlBarViewModel.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="LibraryManager.ViewModel.InputIdPerSonWindowViewModel" Collapsed="true">
+    <Position X="3.5" Y="11.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAACAAAAAAAAAAAAAAAAAAQAAAAAAAAAAIIAAAACAA=</HashCode>
+      <FileName>ViewModel\InputIdPerSonWindowViewModel.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="LibraryManager.ViewModel.LibrarianManagerUCViewModel" Collapsed="true">
+    <Position X="14.75" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAACBAAAAAAAAAAEhAAoRggAAiQAIAAQEAIA=</HashCode>
+      <FileName>ViewModel\LibrarianManagerUCViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LibraryManager.ViewModel.LibrarianWindowViewModel" Collapsed="true">
+    <Position X="3.5" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>pAgAASAAAAAAAABAIABgAAAAQAAAABAAAAAAAgQIAIE=</HashCode>
+      <FileName>ViewModel\LibrarianWindowViewModel.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="LibraryManager.ViewModel.ListBookBorrowUCViewModel" Collapsed="true">
+    <Position X="32.75" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAABAA=</HashCode>
+      <FileName>ViewModel\ListBookBorrowUCViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LibraryManager.ViewModel.LoginWindowViewModel" Collapsed="true">
+    <Position X="8.75" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAABEAABoAAAAAAAACBAEAIgQAACAAAA=</HashCode>
+      <FileName>ViewModel\LoginWindowViewModel.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="LibraryManager.ViewModel.MainWindowViewModel" Collapsed="true">
+    <Position X="5.25" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>oAgAACAECAAAAABAIgBgAAQAQQAAAAEAAAAAAgQIAIA=</HashCode>
+      <FileName>ViewModel\MainWindowViewModel.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="LibraryManager.ViewModel.MemberManagerUCViewModel" Collapsed="true">
+    <Position X="17" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAABAAABAQAAAAAAACAAEBAggBgAAAoBAAABAAAAA=</HashCode>
+      <FileName>ViewModel\MemberManagerUCViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LibraryManager.ViewModel.MemberWindowViewModel" Collapsed="true">
+    <Position X="7" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BEAEAAAAACAAAABgIABgAAAAQAAAABAAAAAAAAQAAIA=</HashCode>
+      <FileName>ViewModel\MemberWindowViewModel.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="LibraryManager.ViewModel.ReturnBookUCViewModel" Collapsed="true">
+    <Position X="35" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAQAAEAAEABAAAAAAAAAAAAAAAMAAAAKAAEAAAABAA=</HashCode>
+      <FileName>ViewModel\ReturnBookUCViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LibraryManager.ViewModel.StatisticBookWindowViewModel" Collapsed="true">
+    <Position X="41.75" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAQAAAAEAAAAEAAAABAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ViewModel\StatisticBookWindowViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LibraryManager.ViewModel.UpdateBookItemWindowViewModel" Collapsed="true">
+    <Position X="5.25" Y="11.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAACAiAAAAAAAAAAQAAAACAAQAAAAEgAAAAAAAAAAA=</HashCode>
+      <FileName>ViewModel\UpdateBookItemWindowViewModel.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Interface Name="LibraryManager.Interface.IAccountCommand">
+    <Position X="13" Y="2.75" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAQAAIA=</HashCode>
+      <FileName>Interface\IAccountCommand.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="LibraryManager.Interface.IExitCommand">
+    <Position X="15.75" Y="4.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAABgAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Interface\IExitCommand.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="LibraryManager.Interface.IOKCancelCommand">
+    <Position X="13" Y="4.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>QAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Interface\IOKCancelCommand.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="LibraryManager.Interface.IWindowOption">
+    <Position X="15.75" Y="2.75" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAgAAAAACAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Interface\IWindowOption.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Enum Name="AccountType">
+    <Position X="13.75" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAAAAAAAAAAAAAQAAAAAEAAAAAAA=</HashCode>
+      <FileName>Model\User.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

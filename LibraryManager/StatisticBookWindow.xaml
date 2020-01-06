@@ -1,0 +1,58 @@
+﻿<Window x:Class="LibraryManager.StatisticBookWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:LibraryManager"
+        mc:Ignorable="d"
+        
+        xmlns:uc="clr-namespace:LibraryManager.CustomUserControl"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+        x:Name="statisticBookWindow"
+        Title="Statistic Book Borrow"
+        
+        Icon="{StaticResource IconStatistic}"
+        
+        Height="750" Width="1000"
+        WindowStartupLocation="CenterScreen"
+        WindowStyle="None"
+        ResizeMode="NoResize">
+    
+    <Border BorderBrush="#007acc" BorderThickness="3">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="60"/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+
+            <!--Control Bar -->
+            <Grid Grid.Row="0" Background="#007acc">
+                <uc:ControlBarUC/>
+                <TextBlock Text="{Binding BookName, UpdateSourceTrigger=PropertyChanged}" 
+                           Foreground="White" FontSize="30" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            </Grid>
+            
+            <!-- List sách đã mượn-->
+
+            <Grid Grid.Row="1">
+                <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto">
+                    <ListView ItemsSource="{Binding ListBorrow, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" 
+                                              VerticalAlignment="Stretch" 
+                                              HorizontalAlignment="Stretch">
+                        <ListView.View>
+                            <GridView>
+                                <GridViewColumn Header="Mã người mượn" DisplayMemberBinding="{Binding IdMember}"/>
+                                <GridViewColumn Header="Người mượn" DisplayMemberBinding="{Binding Member}"/>
+                                <GridViewColumn Header="Mã người cho mượn" DisplayMemberBinding="{Binding IdLibrarian}"/>
+                                <GridViewColumn Header="Người cho mượn" DisplayMemberBinding="{Binding Librarian}"/>
+                                <GridViewColumn Header="Ngày mượn" DisplayMemberBinding="{Binding Path=DateBorrow, StringFormat='dd/MM/yyyy'}" />
+                                <GridViewColumn Header="Hạn trả" DisplayMemberBinding="{Binding Path=DateReturn, StringFormat='dd/MM/yyyy'}"/>
+                            </GridView>
+                        </ListView.View>
+                    </ListView>
+                </ScrollViewer>
+            </Grid>
+        </Grid>
+    </Border>
+</Window>

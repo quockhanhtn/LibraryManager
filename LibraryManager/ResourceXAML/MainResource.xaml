@@ -1,0 +1,24 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:LibraryManager.ResourceXAML"
+                    xmlns:sys="clr-namespace:System;assembly=mscorlib"
+                    xmlns:viewmodel="clr-namespace:LibraryManager.ViewModel">
+    
+    <sys:String x:Key="LibraryName">TÊN THƯ VIỆN</sys:String>
+    
+    <viewmodel:ControlBarViewModel x:Key="ControlBarVM"/>
+    <viewmodel:MainWindowViewModel x:Key="MainWindowVM"/>
+    <viewmodel:LoginWindowViewModel x:Key="LoginWindowVM"/>
+    <viewmodel:BookCategoryManagerUCViewModel x:Key="BookCategoryManagerUCVM"/>
+
+    <BitmapImage x:Key="IconLibrary" UriSource="icon\library.ico"/>
+    <BitmapImage x:Key="IconStatistic" UriSource="icon\statistic.ico"/>
+    <BitmapImage x:Key="IconAddPerson" UriSource="icon\personAdd.ico"/>
+    <BitmapImage x:Key="IconAddBook" UriSource="icon\bookAdd.ico"/>
+    <BitmapImage x:Key="IconAdd" UriSource="icon\add.ico"/>
+    <BitmapImage x:Key="IconInput" UriSource="icon\input.ico"/>
+
+    <BitmapImage x:Key="IconShowPassword" UriSource="icon\showPassword.png"/>
+    <BitmapImage x:Key="IconHidePassword" UriSource="icon\hidePassword.png"/>
+
+</ResourceDictionary>

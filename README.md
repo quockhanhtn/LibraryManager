@@ -1,3 +1,4 @@
 # LibraryManager - Windows Presentation Foundation(WPF) - C#
-Library Manager - Project Final OOP - by Quoc Khanh - http://quockhanh.dev
+Final project of OOP course
+By Lam Quoc Khanh ft Ho Huy Hoang
 Demo : https://www.youtube.com/watch?v=i-c7GIz139Q

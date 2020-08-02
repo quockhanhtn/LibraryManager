@@ -5,6 +5,7 @@ Final project of OOP course at HCMUTE                                           
     • Design language : Material Design (Use Material Design In XAML package by James Willock)        <br>
     • Database : XML file                                                                             <br>
     • Design pattern : Model - View - ViewModel                                                       <br>
+    • Integrated development environment (IDE) : Visual Studio                                        <br>
     • Author : Khanh Lam Quoc, Hoang Ho Huy                                                           <br>
                                                                                                       <br>
 VIDEO DEMO : https://youtu.be/i-c7GIz139Q                                                             <br>
